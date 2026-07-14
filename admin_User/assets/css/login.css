@@ -1,0 +1,91 @@
+
+    body {
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .login-card {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      border: 1px solid white;
+      z-index: 9999;
+    }
+
+    .login-card img {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 70%;
+      height: auto;
+      transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    }
+
+    .login-card:hover {
+      box-shadow: 0 0 20px white;
+    }
+
+    .login-card h3 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+    }
+
+    .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .btn-primary {
+      width: 100%;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+    }
+
+    .footer-text {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      text-align: center;
+      color: white;
+    }
+
+    .footer-text a {
+      font-size: 14px;
+      color: white;
+      margin-top: 20px;
+      text-decoration: underline;
+    }
+
+    @keyframes zoomGlow {
+      0% { transform: scale(1); filter: drop-shadow(0 0 6px white); }
+      50% { transform: scale(1.05); filter: drop-shadow(0 0 15px white); }
+      100% { transform: scale(1); filter: drop-shadow(0 0 6px white); }
+    }
+
+    @media (max-width: 576px) {
+      .login-card {
+        padding: 30px 20px;
+      }
+      .login-card img {
+        width: 100px;
+      }
+    }
+
+    .swal2-container {
+      z-index: 10000 !important;
+    }

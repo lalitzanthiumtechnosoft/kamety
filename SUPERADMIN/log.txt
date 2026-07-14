@@ -1,0 +1,13 @@
+RAW JSON:
+{"ids":["2"],"releaseType":"1"}
+
+PARSED DATA:
+Array
+(
+    [ids] => Array
+        (
+            [0] => 2
+        )
+
+    [releaseType] => 1
+)

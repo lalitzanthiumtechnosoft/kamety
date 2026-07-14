@@ -1,0 +1,66 @@
+<br><br><br>
+<center>
+	<h2>Processing your request!!!</h2>
+	<h3>Please do not press back or refresh!!!</h3>
+</center>
+<?php
+
+date_default_timezone_set('Asia/Kolkata');
+include 'login-check.php';
+if (isset($_POST['royaltyTransfer'])) {
+    $user_id1 = $_POST['sponser_id'];
+    $sender_member_id = $_POST['login_member_id'];
+    $amount = $_POST['amount'];
+    $d = date('Y-m-d H:i:s');
+    $entry_date = date('Y-m-d');
+
+    if ($amount == 0 || $amount < 0) { ?>
+		<script>
+			alert("Invalid Entry Amount!!!");
+			window.top.location.href = "fundTransfer";
+		</script>
+		<?php
+        exit;
+    }
+
+    $result = mysqli_query($con, "SELECT * from sub_admin_user_details where user_id='$user_id1' AND user_type=2 AND account_status=1");
+    if (!mysqli_num_rows($result)) { ?>
+
+		<script>
+			alert("Invalid /Suspended User Details!!!");
+			window.top.location.href = "fundTransfer";
+		</script>
+		<?php
+        exit;
+    }
+
+    $query1 = "SELECT member_id FROM sub_admin_user_details WHERE user_id='$user_id1'";
+    $result1 = mysqli_query($con, $query1);
+    $val1 = mysqli_fetch_assoc($result1);
+    $receiver_member_id = $val1['member_id'];
+
+    if ($sender_member_id == $receiver_member_id) { ?>
+		<script>
+			alert("You Can't Transfer Fund to Yourself!!!");
+			window.top.location.href = "fundTransfer";
+		</script>
+		<?php
+        exit;
+    }
+
+    mysqli_query($con, "UPDATE sub_admin_user_details set wallet=wallet+'$amount' where member_id='$receiver_member_id'");
+
+    mysqli_query($con, "INSERT INTO `user_royalty_income_details`(`member_id`, `incomeAmount`, `date_time`) VALUES ('$receiver_member_id','$amount','$d')");
+    // mysqli_query($con,"INSERT INTO user_fund_transfer_history (`sender_member_id`, `receiver_member_id`, `amount`,`date_time`) VALUES ('$sender_member_id','$receiver_member_id','$amount','$d')");
+
+    mysqli_query($con, "INSERT INTO user_wallet_statement (`member_id`,`wallet_statement_id` ,`deb_cr`, `amount`, `date_time`,`trn_id`) VALUES ('$sender_member_id',5,1,'$amount','$d','$receiver_member_id')");
+
+    mysqli_query($con, "INSERT INTO user_wallet_statement (`member_id`,`wallet_statement_id` ,`deb_cr`, `amount`, `date_time`,`trn_id`) VALUES ('$receiver_member_id',18,2,'$amount','$d','$sender_member_id')");
+
+    ?>
+	<script>
+		alert("Royalty Income Transfer Successfully!!!");
+		window.top.location.href = "royaltyTransfer";
+	</script>
+<?php } ?>
+<?php include '../close-connection.php'; ?>

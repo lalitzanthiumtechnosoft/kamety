@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Secure, transparent, and trusted digital Kamety platform for community savings." />
+    <title>Digital Kamety | Secure Community Savings</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: "#f0fdf4",
+                            100: "#dcfce7",
+                            600: "#16a34a",
+                            700: "#15803d",
+                            900: "#14532d",
+                        },
+                        dark: "#0f172a",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="bg-brand-600 text-white p-2.5 rounded-xl shadow-md shadow-brand-600/20">
+                    <i class="fa-solid fa-wallet text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-dark">Digital<span class="text-brand-600">Kamety</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium text-slate-600">
+                <a href="#how-it-works" class="hover:text-brand-600 transition">How It Works</a>
+                <a href="#active-pools" class="hover:text-brand-600 transition">Savings Pools</a>
+                <a href="#features" class="hover:text-brand-600 transition">Features</a>
+                <a href="#faqs" class="hover:text-brand-600 transition">FAQs</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="admin_User/" class="hidden sm:inline-block font-medium text-slate-600 hover:text-brand-600 transition">Login</a>
+                <a href="/authUserRegister" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-medium transition shadow-lg shadow-brand-600/10">Join
+                    Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-brand-50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 max-w-xl">
+                <div class="inline-flex items-center space-x-2 bg-brand-100 text-brand-700 px-3 py-1.5 rounded-full text-sm font-semibold">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+                    <span>Modernizing Traditional Committees</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-dark leading-tight">
+                    Smart Savings, Backed By
+                    <span class="text-brand-600">Mutual Trust.</span>
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Take your monthly committees digital. Track your contributions, view
+                    fair automated draws, and get guaranteed on-time payouts without
+                    messy paperwork.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#join" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-xl font-semibold shadow-xl shadow-brand-600/20 transition transform hover:-translate-y-0.5">Start
+                        A Committee</a>
+                    <a href="#how-it-works" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-4 rounded-xl font-semibold transition">Learn
+                        More</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <!-- Visual Dashboard Elements Mockup -->
+                <div class="w-full max-w-md bg-dark text-white p-6 rounded-3xl shadow-2xl relative z-10 border border-slate-800">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <p class="text-xs text-slate-400">Total Pool Value</p>
+                            <h3 class="text-2xl font-bold">₹1,50,000</h3>
+                        </div>
+                        <span class="bg-brand-600/20 text-brand-100 text-xs px-2.5 py-1 rounded-lg border border-brand-600/30">Active</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-slate-800/50 p-4 rounded-xl flex justify-between items-center border border-slate-700/30">
+                            <div class="flex items-center space-x-3">
+                                <div class="bg-slate-700 h-9 w-9 rounded-full flex items-center justify-center font-bold text-sm">
+                                    AM
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold">Amit Mishra</p>
+                                    <p class="text-xs text-slate-400">This Month's Winner</p>
+                                </div>
+                            </div>
+                            <span class="text-brand-600 font-bold text-sm">+ Paid</span>
+                        </div>
+                        <div class="bg-slate-800/20 p-4 rounded-xl flex justify-between items-center border border-slate-700/20">
+                            <span class="text-sm text-slate-300">Next Lucky Draw</span>
+                            <span class="text-sm font-mono font-bold text-amber-400">In 12 Days</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-brand-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+                </div>
+                <div class="absolute -top-6 -right-6 w-48 h-48 bg-emerald-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
+                    How It Works
+                </h2>
+                <p class="mt-4 text-lg text-slate-600">
+                    Three simple steps to build your savings circle securely online.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative group hover:border-brand-100 transition">
+                    <div class="bg-brand-600 text-white h-12 w-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-md mb-6">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">
+                        Create or Join a Pool
+                    </h3>
+                    <p class="text-slate-600">
+                        Choose a trusted group or establish a new committee pool with
+                        custom fixed monthly amounts and duration structures.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative group hover:border-brand-100 transition">
+                    <div class="bg-brand-600 text-white h-12 w-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-md mb-6">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Contribute Monthly</h3>
+                    <p class="text-slate-600">
+                        Members pay their fixed monthly shares securely through automated
+                        payment notifications and built-in legal ledgers.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative group hover:border-brand-100 transition">
+                    <div class="bg-brand-600 text-white h-12 w-12 rounded-xl flex items-center justify-center text-xl font-bold shadow-md mb-6">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">
+                        Fair Payout Turnouts
+                    </h3>
+                    <p class="text-slate-600">
+                        Each month, one member receives the collected lump-sum pot via a
+                        completely randomized automated draw or clear bidding structure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Pools Pricing Section -->
+    <section id="active-pools" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
+                    Available Savings Pools
+                </h2>
+                <p class="mt-4 text-lg text-slate-600">
+                    Select a contribution limit that aligns perfectly with your
+                    financial milestones.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+                <!-- Card 1 -->
+                <div class="bg-white border border-slate-200/60 p-8 rounded-3xl shadow-sm flex flex-col justify-between hover:shadow-xl transition">
+                    <div>
+                        <span class="text-xs uppercase tracking-wider font-extrabold text-slate-400">Starter Circle</span>
+                        <h3 class="text-2xl font-bold text-dark mt-2">
+                            ₹5,000
+                            <span class="text-sm font-normal text-slate-500">/ month</span>
+                        </h3>
+                        <div class="my-6 border-b border-slate-100"></div>
+                        <ul class="space-y-3.5 text-slate-600 text-sm">
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i> Total
+                                Payout: <strong>₹50,000</strong>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i>
+                                Duration: 10 Months
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i> Max
+                                Members: 10
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i>
+                                Verified Identity Required
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#join" class="mt-8 block text-center bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-700 py-3 rounded-xl font-semibold transition">Select
+                        Pool</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white border-2 border-brand-600 p-8 rounded-3xl shadow-md flex flex-col justify-between relative transform scale-105 hover:shadow-xl transition">
+                    <div class="absolute top-0 right-8 transform -translate-y-1/2 bg-brand-600 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                        Most Popular
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase tracking-wider font-extrabold text-brand-600">Growth Circle</span>
+                        <h3 class="text-2xl font-bold text-dark mt-2">
+                            ₹10,000
+                            <span class="text-sm font-normal text-slate-500">/ month</span>
+                        </h3>
+                        <div class="my-6 border-b border-slate-100"></div>
+                        <ul class="space-y-3.5 text-slate-600 text-sm">
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i> Total
+                                Payout: <strong>₹1,50,000</strong>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i>
+                                Duration: 15 Months
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i> Max
+                                Members: 15
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-brand-600 mr-2.5"></i>
+                                Automated Ledger Alerts
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#join" class="mt-8 block text-center bg-brand-600 hover:bg-brand-700 text-white py-3 rounded-xl font-semibold shadow-lg shadow-brand-600/20 transition">Select
+                        Pool</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Value Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight text-dark sm:text-4xl mb-6">
+                        Designed For Complete Financial Safety
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-10">
+                        We strip away structural uncertainties by validating participants
+                        and ensuring accounting ledgers remain permanently visible.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-brand-50 p-3 rounded-xl text-brand-600">
+                                <i class="fa-solid fa-shield-halved text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-dark">
+                                    Default Protection Funds
+                                </h4>
+                                <p class="text-slate-600 text-sm mt-1">
+                                    Our platform guarantee protocols cover situational monthly
+                                    gaps if a member encounters unexpected settlement delays.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-brand-50 p-3 rounded-xl text-brand-600">
+                                <i class="fa-solid fa-bolt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-dark">
+                                    Automated Payment Notices
+                                </h4>
+                                <p class="text-slate-600 text-sm mt-1">
+                                    Receive automated updates and notifications before
+                                    processing milestones to ensure allocations finish on time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 grid grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm">
+                        <div class="text-brand-600 mb-4 text-2xl">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h5 class="font-bold text-dark mb-1">100% Verified</h5>
+                        <p class="text-xs text-slate-500">
+                            Every member completes full KYC verification checks.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm">
+                        <div class="text-brand-600 mb-4 text-2xl">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h5 class="font-bold text-dark mb-1">0% Interest</h5>
+                        <p class="text-xs text-slate-500">
+                            Pure mutual community funds without bank premiums.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="join" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl font-bold sm:text-4xl mb-4">
+                Start Your Savings Journey Today
+            </h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-10">
+                Register your interest below, and our community leads will reach out
+                to match you with an active pool circle.
+            </p>
+            <form class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl max-w-lg mx-auto text-left space-y-5">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Full Name</label>
+                    <input type="text" placeholder="John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-600 transition" />
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Phone / WhatsApp
+                        Number</label>
+                    <input type="tel" placeholder="+91 98765 43210" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-600 transition" />
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Preferred Monthly Savings
+                        Pool</label>
+                    <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-brand-600 transition">
+                        <option>Starter Pool (₹5,000 / month)</option>
+                        <option>Growth Pool (₹10,000 / month)</option>
+                        <option>Custom Enterprise Pool</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-bold shadow-lg shadow-brand-600/20 transition">
+                    Submit Application
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="text-lg font-bold tracking-tight text-white">Digital<span class="text-brand-600">Kamety</span></span>
+            </div>
+            <p class="text-sm text-slate-500">
+                &copy; 2026 Digital Kamety. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

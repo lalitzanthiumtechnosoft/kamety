@@ -1,0 +1,106 @@
+
+    body {
+      background-color: #000000;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .register-card {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+      backdrop-filter: blur(5px);
+      border: 1px solid white;
+    }
+
+    .register-card img {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 120px;
+      height: auto;
+    }
+
+    .register-card h3 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+    }
+      .register-card:hover {
+      box-shadow: 0 0 20px white;
+    }
+
+
+    .form-label, .form-control::placeholder {
+      color: white !important;
+    }
+
+    .form-control {
+      background-color: transparent !important;
+      border: 1px solid #ccc;
+      color: white !important;
+    }
+    .form-control option {
+      background-color:black !important;
+      border: 1px solid #ccc;
+      color: white !important;
+    }
+
+    .form-control:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .btn-primary {
+      width: 100%;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+    }
+
+    .footer-text {
+      color: white;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .footer-text a {
+      color: white;
+    }
+
+    @media (max-width: 576px) {
+      .register-card {
+        padding: 30px 20px;
+      }
+    }
+    .register-card img {
+      width: 60%;
+     
+      transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    }
+
+    
+
+    @keyframes zoomGlow {
+      0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px white);
+      }
+      50% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 15px white);
+      }
+      100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 6px white);
+      }
+    }
