@@ -1,5 +1,6 @@
 <?php
 
+//  this is connection file in php
 error_reporting(1);
 session_start();
 date_default_timezone_set('Asia/Kolkata');
